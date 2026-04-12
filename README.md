@@ -248,7 +248,7 @@ python -c "import verl; print('verl OK')"
 | KnowRL Collection | [HasuerYu/knowrl](https://huggingface.co/collections/HasuerYu/knowrl) |
 | Training Data | [HasuerYu/KnowRL-Train-Data](https://huggingface.co/datasets/HasuerYu/KnowRL-Train-Data) |
 | KP Annotations | [HasuerYu/KnowRL-KP-Annotations](https://huggingface.co/datasets/HasuerYu/KnowRL-KP-Annotations) |
-| Model | Coming Soon |
+| Model | [HasuerYu/KnowRL-Nemotron-1.5B](https://huggingface.co/HasuerYu/KnowRL-Nemotron-1.5B) |
 
 ### Local Data
 
