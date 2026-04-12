@@ -1,0 +1,34 @@
+# Exclude huggingface folder
+huggingface/
+
+# Exclude eval outputs (large data files)
+eval/eval_scripts/eval_outputs/
+
+# Exclude verl's nested git repo
+verl/.git/
+
+# Common Python ignores
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Environment
+.env
+.venv/
+env/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

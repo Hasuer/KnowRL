@@ -1,0 +1,16 @@
+working_dir: ./
+excludes: ["/.git/", "/examples/data_preprocess", "/examples/data/**/*.json"]
+env_vars:
+  TORCH_NCCL_AVOID_RECORD_STREAMS: "1"
+  # RAY_DEBUG_POST_MORTEM: "1"
+  NCCL_TIMEOUT: "7200"
+  NCCL_BLOCKING_WAIT: "1"
+  NCCL_ASYNC_ERROR_HANDLING: "1"
+  NCCL_DEBUG: "INFO"
+  NCCL_DEBUG_SUBSYS: "ALL"
+  TORCH_CPP_LOG_LEVEL: "INFO"
+  http_proxy: http://agent.baidu.com:8188
+  https_proxy: http://agent.baidu.com:8188
+  no_proxy: baidu.com,baidubce.com,localhost,127.0.0.1,bj.bcebos.com
+  # If you are using vllm<=0.6.3, you might need to set the following environment variable to avoid bugs:
+  # VLLM_ATTENTION_BACKEND: "XFORMERS"
