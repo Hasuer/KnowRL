@@ -2,7 +2,7 @@
 
 This is the official repository for the paper **KnowRL: Boosting LLM Reasoning via Reinforcement Learning with Minimal-Sufficient Knowledge Guidance**.
 
-[![arXiv](https://img.shields.io/badge/arXiv-2505.XXXXX-b31b1b.svg)](https://arxiv.org/abs/2505.XXXXX)
+[![arXiv](https://img.shields.io/badge/arXiv-2604.12627-b31b1b.svg)](https://arxiv.org/abs/2604.12627)
 [![Collection](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Collection-yellow)](https://huggingface.co/collections/HasuerYu/knowrl)
 [![Training Data](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Training%20Data-yellow)](https://huggingface.co/datasets/HasuerYu/KnowRL-Train-Data)
 [![KP Annotations](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-KP%20Annotations-yellow)](https://huggingface.co/datasets/HasuerYu/KnowRL-KP-Annotations)
@@ -363,5 +363,13 @@ bash eval/eval_scripts/s3_model_base_verl.sh
 If you find this work helpful, please cite our paper:
 
 ```bibtex
-
+@misc{yu2026knowrlboostingllmreasoning,
+      title={KnowRL: Boosting LLM Reasoning via Reinforcement Learning with Minimal-Sufficient Knowledge Guidance}, 
+      author={Linhao Yu and Tianmeng Yang and Siyu Ding and Renren Jin and Naibin Gu and Xiangzhao Hao and Shuaiyi Nie and Deyi Xiong and Weichong Yin and Yu Sun and Hua Wu},
+      year={2026},
+      eprint={2604.12627},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2604.12627}, 
+}
 ```
