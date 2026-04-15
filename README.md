@@ -1,14 +1,35 @@
-# KnowRL: Boosting LLM Reasoning via Reinforcement Learning with Minimal-Sufficient Knowledge Guidance
+<h1 align="center">KnowRL: Boosting LLM Reasoning via Reinforcement Learning<br>with Minimal-Sufficient Knowledge Guidance</h1>
 
-This is the official repository for the paper **KnowRL: Boosting LLM Reasoning via Reinforcement Learning with Minimal-Sufficient Knowledge Guidance**.
+<p align="center">
+  <a href="https://arxiv.org/abs/2604.12627"><img src="https://img.shields.io/badge/📄_PAPER-arXiv-b31b1b.svg?style=for-the-badge" alt="Paper"></a>
+  &nbsp;
+  <a href="https://github.com/HasuerYu/KnowRL"><img src="https://img.shields.io/badge/🔗_CODE-GitHub-black.svg?style=for-the-badge" alt="Code"></a>
+</p>
 
-[![arXiv](https://img.shields.io/badge/arXiv-2604.12627-b31b1b.svg)](https://arxiv.org/abs/2604.12627)
-[![Collection](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Collection-yellow)](https://huggingface.co/collections/HasuerYu/knowrl)
-[![Training Data](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Training%20Data-yellow)](https://huggingface.co/datasets/HasuerYu/KnowRL-Train-Data)
-[![KP Annotations](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-KP%20Annotations-yellow)](https://huggingface.co/datasets/HasuerYu/KnowRL-KP-Annotations)
-[![Model](https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model%20-yellow)](https://huggingface.co/HasuerYu/KnowRL-Nemotron-1.5B)
+<p align="center">
+  <a href="#-news">🎉 News</a> •
+  <a href="#-overview">📖 Overview</a> •
+  <a href="#-getting-started">✨ Getting Started</a> •
+  <a href="#-data">📊 Data</a> •
+  <a href="#-citation">📌 Citation</a>
+</p>
 
-## Overview
+<p align="center">
+  <a href="https://huggingface.co/collections/HasuerYu/knowrl"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Collection-yellow" alt="Collection"></a>
+  <a href="https://huggingface.co/datasets/HasuerYu/KnowRL-Train-Data"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Training%20Data-yellow" alt="Training Data"></a>
+  <a href="https://huggingface.co/datasets/HasuerYu/KnowRL-KP-Annotations"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-KP%20Annotations-yellow" alt="KP Annotations"></a>
+  <a href="https://huggingface.co/HasuerYu/KnowRL-Nemotron-1.5B"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20HuggingFace-Model-yellow" alt="Model"></a>
+</p>
+
+---
+
+## 🎉 News
+
+- **[2026-04-15]** We release our paper, code, training data, KP annotations, and model checkpoints. Check it out: [Paper](https://arxiv.org/abs/2604.12627).
+
+---
+
+## 📖 Overview
 
 Hint-based reinforcement learning (RL) addresses **reward sparsity** in LLM reasoning by injecting auxiliary guidance into prompts. However, existing methods suffer from **hint redundancy** — they inject excessive or loosely structured guidance while only a small subset of information is actually needed. We identify three key challenges:
 
@@ -31,7 +52,7 @@ Hint-based reinforcement learning (RL) addresses **reward sparsity** in LLM reas
 
 3. **State-of-the-art results at 1.5B scale** — KnowRL-Nemotron-1.5B achieves **74.16** average accuracy with CSS across eight competition-level math benchmarks, establishing a new SOTA.
 
-## Main Results
+## 📈 Main Results
 
 ### Overall Performance
 
@@ -117,7 +138,7 @@ We discover a **pruning interaction paradox**: removing individual "bad" KPs imp
   <b>Figure 6.</b> Visualization of the critical-segment effect across prefix ratios on 50 training instances. Performance typically remains flat in low-ratio regions, then exhibits a distinct jump once a key segment is included.
 </p>
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 KnowRL/
@@ -168,7 +189,7 @@ KnowRL/
 └── verl/                     # verl framework (RL training library for LLMs)
 ```
 
-## Setup
+## ✨ Getting Started
 
 ### Prerequisites
 
@@ -239,7 +260,7 @@ python -c "import vllm; print(f'vLLM {vllm.__version__}')"
 python -c "import verl; print('verl OK')"
 ```
 
-## Data
+## 📊 Data
 
 ### HuggingFace Resources
 
@@ -258,7 +279,7 @@ python -c "import verl; print('verl OK')"
 
 - **`train/val/`**: Validation data used during training. Prompts contain only the math problem followed by the suffix `Please reason step by step, and put your final answer within \boxed{}.`, without any knowledge point hints.
 
-## Training
+## 🏋️ Training
 
 We use the DAPO/GRPO algorithm via [verl](https://github.com/volcengine/verl) with Ray for distributed training.
 
@@ -311,7 +332,7 @@ We apply entropy annealing by adjusting the clip upper bound during training. Af
   <b>Figure 7.</b> Comparison with and without entropy annealing. Entropy annealing yields faster entropy reduction and consistently better validation performance, contributing +0.74 average accuracy improvement.
 </p>
 
-## Evaluation
+## 📝 Evaluation
 
 The evaluation pipeline consists of three steps: generation, judge model serving, and scoring.
 
@@ -358,7 +379,7 @@ Run rule-based evaluation on the generated outputs:
 bash eval/eval_scripts/s3_model_base_verl.sh
 ```
 
-## Citation
+## 📌 Citation
 
 If you find this work helpful, please cite our paper:
 
