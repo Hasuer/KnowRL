@@ -25,6 +25,7 @@
 
 ## 🎉 News
 
+- **[2026-04-16]** KnowRL ranks **#1** on Hugging Face Daily Papers! Check it out: [Daily Paper](https://huggingface.co/papers/2604.12627).
 - **[2026-04-15]** We release our paper, code, training data, KP annotations, and model checkpoints. Check it out: [Paper](https://arxiv.org/abs/2604.12627).
 
 ---
